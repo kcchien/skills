@@ -1,0 +1,17 @@
+# Document to Markdown Converter Dependencies
+
+# PDF conversion (primary - fast, no model download)
+pymupdf4llm>=0.2.0
+
+# Office files (docx, pptx, xlsx) and fallback
+markitdown>=0.0.1
+
+# Optional: Better PDF conversion for complex layouts
+# marker-pdf>=1.0.0  # Requires ~1.3GB model download
+
+# Optional: OCR for images
+# pytesseract  # Requires Tesseract installed: brew install tesseract
+# easyocr      # Deep learning OCR
+
+# Configuration
+pyyaml>=6.0
