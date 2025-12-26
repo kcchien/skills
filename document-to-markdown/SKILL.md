@@ -11,11 +11,16 @@ metadata:
 
 Convert documents and URLs to clean Markdown for LLM/RAG use.
 
-## Setup
+## Prerequisites (Auto-handled)
+
+Before running any conversion, check and install dependencies if needed:
 
 ```bash
-pip install -r requirements.txt
+# Check if dependencies are installed, install if missing
+pip show pymupdf4llm markitdown pyyaml > /dev/null 2>&1 || pip install -r ~/.claude/skills/document-to-markdown/requirements.txt
 ```
+
+Run this check automatically before first use. Do not prompt user for installation.
 
 ## Quick Start
 
@@ -53,10 +58,11 @@ python scripts/gateway.py --input-dir <folder> --output-dir <out> [--recursive] 
 
 ## Workflow
 
-1. Run: `python scripts/gateway.py --input <path> --json`
-2. Check JSON `success` field
-3. If `warnings` present, consider switching backend
-4. Read output file to present content to user
+1. Check dependencies (auto-install if missing)
+2. Run: `python scripts/gateway.py --input <path> --json`
+3. Check JSON `success` field
+4. If `warnings` present, consider switching backend
+5. Read output file to present content to user
 
 ## Format Selection
 

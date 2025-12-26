@@ -18,5 +18,6 @@ Thumbs.db
 
 # Test outputs
 *.md
+!README.md
 !SKILL.md
 !references/*.md

@@ -1,0 +1,175 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e94560"/>
+      <stop offset="100%" style="stop-color:#ff6b6b"/>
+    </linearGradient>
+    <linearGradient id="mdGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d9ff"/>
+      <stop offset="100%" style="stop-color:#0099cc"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Decorative grid pattern -->
+  <g opacity="0.05">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+    </pattern>
+    <rect width="1200" height="630" fill="url(#grid)"/>
+  </g>
+
+  <!-- Left side: Document icons -->
+  <g transform="translate(120, 180)" filter="url(#shadow)">
+    <!-- PDF icon -->
+    <g transform="translate(0, 0)">
+      <rect width="80" height="100" rx="8" fill="#ff4444"/>
+      <rect x="10" y="15" width="60" height="6" rx="3" fill="white" opacity="0.8"/>
+      <rect x="10" y="28" width="45" height="4" rx="2" fill="white" opacity="0.5"/>
+      <rect x="10" y="38" width="55" height="4" rx="2" fill="white" opacity="0.5"/>
+      <rect x="10" y="48" width="40" height="4" rx="2" fill="white" opacity="0.5"/>
+      <text x="40" y="85" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">PDF</text>
+    </g>
+
+    <!-- DOCX icon -->
+    <g transform="translate(100, 40)">
+      <rect width="80" height="100" rx="8" fill="#2b579a"/>
+      <rect x="10" y="15" width="60" height="6" rx="3" fill="white" opacity="0.8"/>
+      <rect x="10" y="28" width="50" height="4" rx="2" fill="white" opacity="0.5"/>
+      <rect x="10" y="38" width="55" height="4" rx="2" fill="white" opacity="0.5"/>
+      <rect x="10" y="48" width="35" height="4" rx="2" fill="white" opacity="0.5"/>
+      <text x="40" y="85" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">DOCX</text>
+    </g>
+
+    <!-- XLSX icon -->
+    <g transform="translate(0, 130)">
+      <rect width="80" height="100" rx="8" fill="#217346"/>
+      <g transform="translate(10, 15)">
+        <rect width="28" height="20" fill="white" opacity="0.3"/>
+        <rect x="30" width="28" height="20" fill="white" opacity="0.5"/>
+        <rect y="22" width="28" height="20" fill="white" opacity="0.5"/>
+        <rect x="30" y="22" width="28" height="20" fill="white" opacity="0.3"/>
+      </g>
+      <text x="40" y="85" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">XLSX</text>
+    </g>
+
+    <!-- PPTX icon -->
+    <g transform="translate(100, 170)">
+      <rect width="80" height="100" rx="8" fill="#d24726"/>
+      <rect x="12" y="20" width="56" height="35" rx="4" fill="white" opacity="0.2"/>
+      <circle cx="40" cy="37" r="12" fill="white" opacity="0.4"/>
+      <text x="40" y="85" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">PPTX</text>
+    </g>
+
+    <!-- Image icon -->
+    <g transform="translate(50, 290)">
+      <rect width="80" height="100" rx="8" fill="#9b59b6"/>
+      <rect x="10" y="15" width="60" height="45" rx="4" fill="white" opacity="0.2"/>
+      <circle cx="28" cy="32" r="8" fill="#f1c40f"/>
+      <path d="M15 55 L35 35 L50 50 L65 40 L65 55 Z" fill="#27ae60" opacity="0.8"/>
+      <text x="40" y="85" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">IMG</text>
+    </g>
+  </g>
+
+  <!-- Center: Arrow with transformation effect -->
+  <g transform="translate(400, 280)">
+    <!-- Arrow body -->
+    <path d="M0 35 L280 35 L280 15 L350 50 L280 85 L280 65 L0 65 Z" fill="url(#arrowGradient)" filter="url(#glow)"/>
+
+    <!-- Transformation particles -->
+    <g opacity="0.8">
+      <circle cx="60" cy="30" r="4" fill="#fff">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="120" cy="60" r="3" fill="#fff">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="180" cy="25" r="5" fill="#fff">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="240" cy="70" r="3" fill="#fff">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Right side: Markdown output -->
+  <g transform="translate(800, 160)" filter="url(#shadow)">
+    <rect width="280" height="320" rx="12" fill="#1e1e1e"/>
+    <rect x="0" y="0" width="280" height="40" rx="12" fill="#333"/>
+    <rect x="0" y="28" width="280" height="12" fill="#333"/>
+
+    <!-- Window controls -->
+    <circle cx="20" cy="20" r="6" fill="#ff5f56"/>
+    <circle cx="40" cy="20" r="6" fill="#ffbd2e"/>
+    <circle cx="60" cy="20" r="6" fill="#27ca3f"/>
+
+    <!-- Markdown content -->
+    <g transform="translate(20, 60)">
+      <!-- Heading -->
+      <text fill="url(#mdGradient)" font-family="Monaco, monospace" font-size="18" font-weight="bold"># Document Title</text>
+
+      <!-- Paragraph -->
+      <text y="35" fill="#a0a0a0" font-family="Monaco, monospace" font-size="13">Clean, structured content</text>
+      <text y="55" fill="#a0a0a0" font-family="Monaco, monospace" font-size="13">ready for LLM processing.</text>
+
+      <!-- Subheading -->
+      <text y="95" fill="#00d9ff" font-family="Monaco, monospace" font-size="15" font-weight="bold">## Features</text>
+
+      <!-- List items -->
+      <text y="120" fill="#98c379" font-family="Monaco, monospace" font-size="13">- Tables preserved</text>
+      <text y="140" fill="#98c379" font-family="Monaco, monospace" font-size="13">- Images extracted</text>
+      <text y="160" fill="#98c379" font-family="Monaco, monospace" font-size="13">- Links maintained</text>
+
+      <!-- Code block indicator -->
+      <text y="195" fill="#e06c75" font-family="Monaco, monospace" font-size="13">```json</text>
+      <text y="215" fill="#d19a66" font-family="Monaco, monospace" font-size="12">{"success": true}</text>
+      <text y="235" fill="#e06c75" font-family="Monaco, monospace" font-size="13">```</text>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="80" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="42" font-weight="bold" filter="url(#glow)">document-to-markdown</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="120" text-anchor="middle" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="20">Convert any document to clean Markdown for LLM/RAG</text>
+
+  <!-- Footer: Feature badges -->
+  <g transform="translate(280, 560)">
+    <rect x="0" y="0" width="120" height="32" rx="16" fill="#e94560" opacity="0.2"/>
+    <text x="60" y="21" text-anchor="middle" fill="#e94560" font-family="Arial, sans-serif" font-size="13" font-weight="bold">PDF</text>
+
+    <rect x="140" y="0" width="120" height="32" rx="16" fill="#00d9ff" opacity="0.2"/>
+    <text x="200" y="21" text-anchor="middle" fill="#00d9ff" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Office</text>
+
+    <rect x="280" y="0" width="120" height="32" rx="16" fill="#27ca3f" opacity="0.2"/>
+    <text x="340" y="21" text-anchor="middle" fill="#27ca3f" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Images</text>
+
+    <rect x="420" y="0" width="120" height="32" rx="16" fill="#9b59b6" opacity="0.2"/>
+    <text x="480" y="21" text-anchor="middle" fill="#9b59b6" font-family="Arial, sans-serif" font-size="13" font-weight="bold">URLs</text>
+
+    <rect x="560" y="0" width="120" height="32" rx="16" fill="#f39c12" opacity="0.2"/>
+    <text x="620" y="21" text-anchor="middle" fill="#f39c12" font-family="Arial, sans-serif" font-size="13" font-weight="bold">RAG Ready</text>
+  </g>
+
+  <!-- Claude Code branding -->
+  <text x="600" y="610" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="14">A Claude Code Skill</text>
+</svg>
